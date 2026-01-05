@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Download, FileText, Scale, TrendingDown, TrendingUp, Calendar, Shield, AlertCircle } from "lucide-react";
+import { Download, FileText, Scale, TrendingDown, TrendingUp, Calendar, Shield, AlertCircle, Rocket, Brain, Heart, CheckCircle2, Target, Sparkles, GraduationCap, Instagram, Building2, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -543,6 +543,366 @@ export default function Home() {
                   <p className="font-semibold text-primary">AGORA</p>
                   <p className="text-sm text-muted-foreground">Entrar com Revisional</p>
                 </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* BALA DE PRATA - Reinvenção Profissional */}
+      <section id="bala-de-prata" className="py-20 bg-gradient-to-br from-amber-50 via-background to-orange-50 relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl -z-10"></div>
+        
+        <div className="container">
+          {/* Header com mensagem para Prima */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500/10 rounded-full mb-6">
+              <Sparkles className="h-5 w-5 text-amber-600" />
+              <span className="text-amber-700 font-bold">🎯 ESTRATÉGIA CONFIDENCIAL</span>
+              <Sparkles className="h-5 w-5 text-amber-600" />
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+              A Bala de Prata
+            </h2>
+            <p className="text-2xl text-amber-700 font-semibold mb-4">
+              "Prima, essa é a jogada que muda tudo"
+            </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Uma estratégia genuína de reinvenção profissional por saúde mental que fortalece 
+              juridicamente a revisão de pensão e desarma qualquer contra-ataque.
+            </p>
+          </div>
+
+          {/* Card Principal - A Visão */}
+          <Card className="mb-12 border-2 border-amber-300 shadow-2xl bg-gradient-to-br from-white to-amber-50">
+            <CardHeader className="text-center pb-2">
+              <div className="w-20 h-20 rounded-full bg-amber-500/20 flex items-center justify-center mx-auto mb-4">
+                <Brain className="h-10 w-10 text-amber-600" />
+              </div>
+              <CardTitle className="text-3xl text-amber-700">A Descoberta que Mudou Tudo</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <h4 className="text-xl font-bold text-foreground flex items-center gap-2">
+                    <Heart className="h-5 w-5 text-red-500" />
+                    O Que Aconteceu
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Antes de descobrir o TDAH, eu vivia ouvindo "vozes" - críticas, cobranças, 
+                    expectativas dos outros. Quando coloquei os "óculos do TDAH", essas vozes 
+                    silenciaram e <strong className="text-amber-700">minha própria voz alcançou minha consciência</strong>.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Vi com clareza que meu propósito é <strong className="text-amber-700">ajudar outras pessoas 
+                    na mesma condição</strong> - com TDAH/TOC - e empreender nessa área.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-xl font-bold text-foreground flex items-center gap-2">
+                    <Target className="h-5 w-5 text-amber-600" />
+                    A Decisão Estratégica
+                  </h4>
+                  <div className="bg-amber-100/50 p-4 rounded-lg border border-amber-200">
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" />
+                        <span><strong>Desativar MEI antigo</strong> - Não tenho mais interesse em atuar com tecnologia diretamente</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" />
+                        <span><strong>Este projeto é o último</strong> - Para honrar a dívida não conciliada</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-amber-600 mt-0.5 flex-shrink-0" />
+                        <span><strong>Abrir novo MEI</strong> - Educação conectada ao perfil @rafael.tdah</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Timeline da Reinvenção */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-center mb-8 flex items-center justify-center gap-2">
+              <Calendar className="h-6 w-6 text-amber-600" />
+              Timeline da Reinvenção
+            </h3>
+            <div className="relative">
+              {/* Linha conectora */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700 hidden md:block"></div>
+              
+              <div className="space-y-8">
+                {/* Maio 2024 */}
+                <div className="flex flex-col md:flex-row items-center gap-4">
+                  <div className="md:w-1/2 md:text-right md:pr-8">
+                    <Card className="inline-block bg-white shadow-lg border-amber-200">
+                      <CardContent className="p-4">
+                        <p className="font-bold text-amber-700">Maio 2024</p>
+                        <p className="text-lg font-semibold">Laudo TOC (Pure O)</p>
+                        <p className="text-sm text-muted-foreground">Primeiro diagnóstico documentado</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center z-10 shadow-lg">
+                    <FileText className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="md:w-1/2 md:pl-8"></div>
+                </div>
+
+                {/* Dezembro 2024 */}
+                <div className="flex flex-col md:flex-row items-center gap-4">
+                  <div className="md:w-1/2 md:text-right md:pr-8"></div>
+                  <div className="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center z-10 shadow-lg">
+                    <Brain className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="md:w-1/2 md:pl-8">
+                    <Card className="inline-block bg-white shadow-lg border-amber-200">
+                      <CardContent className="p-4">
+                        <p className="font-bold text-amber-700">Dezembro 2024</p>
+                        <p className="text-lg font-semibold">Laudo TDAH + Prisão</p>
+                        <p className="text-sm text-muted-foreground">Ponto de inflexão - diagnóstico completo</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+
+                {/* Janeiro 2025 - Tratamento */}
+                <div className="flex flex-col md:flex-row items-center gap-4">
+                  <div className="md:w-1/2 md:text-right md:pr-8">
+                    <Card className="inline-block bg-white shadow-lg border-amber-200">
+                      <CardContent className="p-4">
+                        <p className="font-bold text-amber-700">Janeiro 2025</p>
+                        <p className="text-lg font-semibold">Tratamento Ativo</p>
+                        <p className="text-sm text-muted-foreground">R$ 930/mês em medicamentos + acompanhamento</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center z-10 shadow-lg">
+                    <Heart className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="md:w-1/2 md:pl-8"></div>
+                </div>
+
+                {/* Janeiro 2025 - Novo Propósito */}
+                <div className="flex flex-col md:flex-row items-center gap-4">
+                  <div className="md:w-1/2 md:text-right md:pr-8"></div>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center z-10 shadow-lg">
+                    <Rocket className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="md:w-1/2 md:pl-8">
+                    <Card className="inline-block bg-gradient-to-br from-amber-50 to-orange-50 shadow-lg border-2 border-amber-400">
+                      <CardContent className="p-4">
+                        <p className="font-bold text-amber-700">Janeiro 2025</p>
+                        <p className="text-lg font-semibold">🚀 Novo Propósito de Vida</p>
+                        <div className="flex items-center gap-2 mt-2">
+                          <Instagram className="h-4 w-4 text-pink-600" />
+                          <span className="text-sm font-medium">@rafael.tdah</span>
+                          <span className="text-sm text-muted-foreground">+ MEI Educação</span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Por que isso funciona juridicamente */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <Card className="shadow-lg border-green-200 bg-gradient-to-br from-white to-green-50">
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center gap-2 text-green-700">
+                  <Scale className="h-6 w-6" />
+                  Por que Funciona Juridicamente
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="bg-green-100/50 p-4 rounded-lg border border-green-200">
+                  <p className="font-semibold text-green-700 mb-2">Art. 1.695, Código Civil</p>
+                  <p className="text-sm text-muted-foreground italic">
+                    "São devidos os alimentos quando quem os pretende não tem bens suficientes, 
+                    nem pode prover, pelo seu trabalho, à própria mantença, e aquele, de quem se 
+                    reclamam, pode fornecê-los, sem desfalque do necessário ao seu sustento."
+                  </p>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5" />
+                    <div>
+                      <p className="font-semibold">Mudança de Recursos Documentada</p>
+                      <p className="text-sm text-muted-foreground">Laudos médicos comprovam necessidade de mudança de carreira</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5" />
+                    <div>
+                      <p className="font-semibold">Renda Instável em 2025</p>
+                      <p className="text-sm text-muted-foreground">Início de novo negócio = argumento forte para revisão</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5" />
+                    <div>
+                      <p className="font-semibold">Cronologia Coerente</p>
+                      <p className="text-sm text-muted-foreground">Juiz vê ordem lógica: diagnóstico → tratamento → reinvenção</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-blue-200 bg-gradient-to-br from-white to-blue-50">
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center gap-2 text-blue-700">
+                  <Shield className="h-6 w-6" />
+                  Defesa Preventiva
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Esta estratégia <strong>desarma os contra-ataques</strong> antes deles acontecerem:
+                </p>
+                
+                <div className="space-y-3">
+                  <div className="bg-blue-100/50 p-3 rounded-lg border border-blue-200">
+                    <p className="font-semibold text-blue-700">"Ele está escondendo renda"</p>
+                    <p className="text-sm text-muted-foreground flex items-center gap-2 mt-1">
+                      <ArrowRight className="h-4 w-4" />
+                      Laudos médicos comprovam necessidade de mudança
+                    </p>
+                  </div>
+                  
+                  <div className="bg-blue-100/50 p-3 rounded-lg border border-blue-200">
+                    <p className="font-semibold text-blue-700">"É manobra para não pagar"</p>
+                    <p className="text-sm text-muted-foreground flex items-center gap-2 mt-1">
+                      <ArrowRight className="h-4 w-4" />
+                      Diagnósticos são de ANTES da prisão (Maio/24)
+                    </p>
+                  </div>
+                  
+                  <div className="bg-blue-100/50 p-3 rounded-lg border border-blue-200">
+                    <p className="font-semibold text-blue-700">"Ele pode trabalhar com TI"</p>
+                    <p className="text-sm text-muted-foreground flex items-center gap-2 mt-1">
+                      <ArrowRight className="h-4 w-4" />
+                      Laudo indica necessidade de ambiente com menos pressão
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Checklist de Documentos */}
+          <Card className="mb-12 shadow-lg border-purple-200 bg-gradient-to-br from-white to-purple-50">
+            <CardHeader>
+              <CardTitle className="text-2xl flex items-center gap-2 text-purple-700">
+                <FileText className="h-6 w-6" />
+                Checklist de Documentos para Reunir
+              </CardTitle>
+              <CardDescription>Prima, precisamos organizar esses documentos para a ação</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="flex items-center gap-3 p-3 bg-purple-100/50 rounded-lg border border-purple-200">
+                  <div className="w-6 h-6 rounded border-2 border-purple-400 flex items-center justify-center">
+                    <CheckCircle2 className="h-4 w-4 text-purple-600" />
+                  </div>
+                  <span className="text-sm">Laudo TOC (Maio/2024)</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-purple-100/50 rounded-lg border border-purple-200">
+                  <div className="w-6 h-6 rounded border-2 border-purple-400 flex items-center justify-center">
+                    <CheckCircle2 className="h-4 w-4 text-purple-600" />
+                  </div>
+                  <span className="text-sm">Laudo TDAH (Dez/2024)</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-purple-100/50 rounded-lg border border-purple-200">
+                  <div className="w-6 h-6 rounded border-2 border-purple-400 flex items-center justify-center">
+                    <CheckCircle2 className="h-4 w-4 text-purple-600" />
+                  </div>
+                  <span className="text-sm">Prescrições médicas</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-purple-100/50 rounded-lg border border-purple-200">
+                  <div className="w-6 h-6 rounded border-2 border-purple-400 flex items-center justify-center">
+                    <CheckCircle2 className="h-4 w-4 text-purple-600" />
+                  </div>
+                  <span className="text-sm">Comprovantes medicação (R$ 930/mês)</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-amber-100/50 rounded-lg border border-amber-200">
+                  <div className="w-6 h-6 rounded border-2 border-amber-400"></div>
+                  <span className="text-sm">Prints @rafael.tdah</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-amber-100/50 rounded-lg border border-amber-200">
+                  <div className="w-6 h-6 rounded border-2 border-amber-400"></div>
+                  <span className="text-sm">Novo MEI (Educação)</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-amber-100/50 rounded-lg border border-amber-200">
+                  <div className="w-6 h-6 rounded border-2 border-amber-400"></div>
+                  <span className="text-sm">Encerramento MEI antigo</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-amber-100/50 rounded-lg border border-amber-200">
+                  <div className="w-6 h-6 rounded border-2 border-amber-400"></div>
+                  <span className="text-sm">Declaração de propósito</span>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                <span className="inline-flex items-center gap-1"><CheckCircle2 className="h-4 w-4 text-purple-600" /> = Já temos</span>
+                <span className="ml-4">□ = Precisamos providenciar</span>
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Projeção de Sucesso */}
+          <Card className="border-2 border-amber-400 shadow-2xl bg-gradient-to-br from-amber-50 to-orange-50">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl flex items-center justify-center gap-2 text-amber-700">
+                <Target className="h-8 w-8" />
+                Projeção de Sucesso
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center p-6 bg-green-100 rounded-xl border-2 border-green-300">
+                  <p className="text-5xl font-bold text-green-700">70%</p>
+                  <p className="text-lg font-semibold text-green-800 mt-2">Redução Significativa</p>
+                  <p className="text-sm text-green-600">Pensão adequada à nova realidade</p>
+                </div>
+                
+                <div className="text-center p-6 bg-amber-100 rounded-xl border-2 border-amber-300">
+                  <p className="text-5xl font-bold text-amber-700">20%</p>
+                  <p className="text-lg font-semibold text-amber-800 mt-2">Vitória Completa</p>
+                  <p className="text-sm text-amber-600">Compensação total + revisão favorável</p>
+                </div>
+                
+                <div className="text-center p-6 bg-blue-100 rounded-xl border-2 border-blue-300">
+                  <p className="text-5xl font-bold text-blue-700">10%</p>
+                  <p className="text-lg font-semibold text-blue-800 mt-2">Manutenção Temporária</p>
+                  <p className="text-sm text-blue-600">Até estabilização da nova renda</p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-amber-200 to-orange-200 p-6 rounded-xl text-center">
+                <p className="text-xl font-bold text-amber-900 mb-2">
+                  💡 Prima, o mais importante:
+                </p>
+                <p className="text-lg text-amber-800">
+                  <strong>Isso não é mentira, é verdade.</strong> É genuíno, está conectado com meus laudos, 
+                  e cria uma narrativa que o juiz vai entender: um pai que passou por uma crise de saúde, 
+                  descobriu seu propósito, e está se reinventando para poder cuidar do filho de forma sustentável.
+                </p>
               </div>
             </CardContent>
           </Card>
