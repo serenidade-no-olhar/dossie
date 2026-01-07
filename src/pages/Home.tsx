@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Download, FileText, Scale, TrendingDown, TrendingUp, Calendar, Shield, AlertCircle, Rocket, Brain, Heart, CheckCircle2, Target, Sparkles, GraduationCap, Instagram, Building2, ArrowRight } from "lucide-react";
+import ProfileAnalysisBox from "@/components/ProfileAnalysisBox";
+import { Download, FileText, Scale, TrendingDown, TrendingUp, Calendar, Shield, AlertCircle, Rocket, Brain, Heart, CheckCircle2, Target, Sparkles, GraduationCap, Instagram, Building2, ArrowRight, Users } from "lucide-react";
 
 export default function Home() {
   return (
@@ -396,6 +397,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Análise do Perfil Psicológico - Box Interativo */}
+      <ProfileAnalysisBox />
+
       {/* Estratégia Jurídica */}
       <section className="py-20 bg-background">
         <div className="container">
@@ -481,38 +485,55 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Tese 3 */}
-            <Card className="shadow-lg hover:shadow-2xl transition-shadow border-t-4 border-t-accent">
+            {/* Tese 3 - DESTAQUE ESPECIAL */}
+            <Card className="shadow-lg hover:shadow-2xl transition-shadow border-2 border-amber-500 bg-gradient-to-br from-amber-50/50 to-orange-50/50 relative overflow-hidden">
+              {/* Badge de destaque */}
+              <div className="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                TESE CENTRAL
+              </div>
               <CardHeader>
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                  <TrendingDown className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 rounded-full bg-amber-500/20 flex items-center justify-center mb-4">
+                  <TrendingDown className="h-8 w-8 text-amber-600" />
                 </div>
-                <CardTitle className="text-2xl">Tese 3: Revisão Imediata</CardTitle>
-                <CardDescription>Adequação à realidade financeira</CardDescription>
+                <CardTitle className="text-2xl text-amber-900">Tese 3: Revisão Imediata</CardTitle>
+                <CardDescription className="text-amber-700">A nova realidade exige adequação</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="bg-primary/5 p-4 rounded-lg">
-                  <p className="font-semibold text-primary mb-2">Situação Atual:</p>
+                <div className="bg-white/80 p-4 rounded-lg border border-amber-200">
+                  <p className="font-semibold text-amber-800 mb-2">Situação Atual:</p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Renda: R$ 15.000/mês</li>
+                    <li>• Renda atual: R$ 15.000/mês</li>
                     <li>• Custos essenciais: R$ 8.704/mês</li>
-                    <li>• Medicamentos obrigatórios: R$ 930/mês</li>
+                    <li>• Medicamentos TDAH/TOC: R$ 930/mês</li>
                   </ul>
                 </div>
                 
-                <div className="bg-secondary/5 p-4 rounded-lg">
-                  <p className="font-semibold text-secondary mb-2">Mudança Drástica:</p>
+                <div className="bg-amber-100/50 p-4 rounded-lg border border-amber-300">
+                  <p className="font-semibold text-amber-800 mb-2">🔗 Conectado à Bala de Prata:</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    O diagnóstico de <strong>TDAH (Dez/2024)</strong> não foi apenas médico — foi uma 
+                    <strong className="text-amber-700"> descoberta de propósito</strong>.
+                  </p>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>→ Tecnologia saiu do propósito de vida</li>
+                    <li>→ Novo MEI: Educação em saúde mental (@rafael.tdah)</li>
+                    <li>→ Objetivo: ajudar quem vive com TDAH e não sabe</li>
+                    <li>→ Renda em transição para nova carreira</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/80 p-4 rounded-lg border-2 border-amber-400">
+                  <p className="font-semibold text-amber-800 mb-2">Pedido:</p>
                   <p className="text-sm text-muted-foreground">
-                    Perda de emprego anterior, mudança para o exterior, diagnóstico de TDAH 
-                    com custos médicos elevados.
+                    Liminar para revisão imediata da pensão com base no binômio 
+                    necessidade/possibilidade atualizado — considerando a <strong>transição de carreira 
+                    genuína e documentada</strong> motivada por questões de saúde mental.
                   </p>
                 </div>
 
-                <div className="bg-accent/5 p-4 rounded-lg">
-                  <p className="font-semibold text-accent mb-2">Pedido:</p>
-                  <p className="text-sm text-muted-foreground">
-                    Liminar para revisão imediata da pensão com base no binômio 
-                    necessidade/possibilidade atualizado
+                <div className="bg-amber-500/10 p-3 rounded-lg text-center">
+                  <p className="text-xs text-amber-700 italic">
+                    "Quero salvar vidas. Preciso das condições necessárias para isso."
                   </p>
                 </div>
               </CardContent>
@@ -527,8 +548,7 @@ export default function Home() {
             <CardContent className="text-center space-y-4">
               <p className="text-lg text-muted-foreground">
                 Existe uma <strong className="text-primary">janela crítica de 3 meses</strong> para 
-                entrar com a Ação Revisional no Brasil e se antecipar a qualquer novo pedido de prisão, 
-                enfraquecendo futuras ações internacionais.
+                entrar com a Ação Revisional no Brasil e se antecipar a qualquer novo pedido de prisão.
               </p>
               <div className="grid md:grid-cols-3 gap-4 mt-6">
                 <div className="bg-card p-4 rounded-lg">
@@ -536,14 +556,18 @@ export default function Home() {
                   <p className="text-sm text-muted-foreground">Novo pedido de prisão possível</p>
                 </div>
                 <div className="bg-card p-4 rounded-lg">
-                  <p className="font-semibold text-destructive">Janeiro 2026</p>
-                  <p className="text-sm text-muted-foreground">Cobrança via Convenção de Haia</p>
+                  <p className="font-semibold text-amber-600">Possível Ação Internacional</p>
+                  <p className="text-sm text-muted-foreground">Ela pode tentar usar informações sobre localização no exterior (viu status no WhatsApp)</p>
                 </div>
-                <div className="bg-card p-4 rounded-lg">
+                <div className="bg-card p-4 rounded-lg border-2 border-primary">
                   <p className="font-semibold text-primary">AGORA</p>
                   <p className="text-sm text-muted-foreground">Entrar com Revisional</p>
                 </div>
               </div>
+              <p className="text-xs text-muted-foreground mt-4 italic">
+                Nota: A localização atual é temporária e incerta — o propósito de vida mudou com o diagnóstico de TDAH, 
+                e o foco agora é empreender na área de saúde mental, independente de onde isso aconteça.
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -622,6 +646,107 @@ export default function Home() {
                       </li>
                     </ul>
                   </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Box: Por que essa decisão? - Dados e Contexto */}
+          <Card className="mb-12 border-2 border-blue-300 shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50">
+            <CardHeader className="pb-2">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                  <Users className="h-6 w-6 text-blue-600" />
+                </div>
+                <div>
+                  <CardTitle className="text-xl text-blue-800">Por que essa decisão?</CardTitle>
+                  <p className="text-sm text-blue-600">Dados, contexto e propósito</p>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-5">
+              {/* Dados sobre TDAH no Brasil */}
+              <div className="bg-white/80 p-4 rounded-lg border border-blue-200">
+                <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
+                  <span className="text-lg">🇧🇷</span> O Cenário do TDAH no Brasil
+                </h4>
+                <div className="grid md:grid-cols-3 gap-4 mb-3">
+                  <div className="text-center p-3 bg-blue-100/50 rounded-lg">
+                    <p className="text-2xl font-bold text-blue-700">4 milhões</p>
+                    <p className="text-xs text-blue-600">adultos com sintomas de TDAH (18-44 anos)</p>
+                  </div>
+                  <div className="text-center p-3 bg-blue-100/50 rounded-lg">
+                    <p className="text-2xl font-bold text-blue-700">+123%</p>
+                    <p className="text-xs text-blue-600">aumento de diagnósticos em adultos (10 anos)</p>
+                  </div>
+                  <div className="text-center p-3 bg-blue-100/50 rounded-lg">
+                    <p className="text-2xl font-bold text-blue-700">Maioria</p>
+                    <p className="text-xs text-blue-600">não foi diagnosticada na infância</p>
+                  </div>
+                </div>
+                <p className="text-xs text-blue-600 italic">Fontes: Ministério da Saúde (2025), ABDA, Drauzio Varella</p>
+              </div>
+
+              {/* Minha história */}
+              <div className="bg-amber-50/80 p-4 rounded-lg border border-amber-200">
+                <h4 className="font-bold text-amber-800 mb-3">🧠 Minha Jornada de Autodescoberta</h4>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p>
+                    <strong className="text-amber-700">TOC (Pure O) desde os 14 anos</strong> — sofri por décadas sem saber o que era. 
+                    Descobri sozinho, pesquisando, e depois confirmei com laudo (Maio/2024).
+                  </p>
+                  <p>
+                    <strong className="text-amber-700">TDAH descoberto tardiamente</strong> — era a condição primária, o TOC era secundário. 
+                    Uma amiga me ajudou a perceber, mas eu já havia identificado os padrões em mim mesmo. Laudo em Dez/2024.
+                  </p>
+                  <p>
+                    <strong className="text-amber-700">Lacuna de diagnóstico</strong> — muitos psiquiatras ainda não identificam TDAH em adultos corretamente. 
+                    Eu tive que fazer o trabalho de investigação sozinho.
+                  </p>
+                </div>
+              </div>
+
+              {/* Talentos descobertos */}
+              <div className="bg-green-50/80 p-4 rounded-lg border border-green-200">
+                <h4 className="font-bold text-green-800 mb-3">💡 O que descobri sobre mim</h4>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      <strong className="text-green-700">Talento para empreender</strong> — descobri que isso é inevitável em mim. 
+                      Saúde mental, estética, outras áreas... o empreendedorismo é o caminho.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      <strong className="text-green-700">Tecnologia saiu do propósito</strong> — definitivamente. 
+                      Não é mais uma opção para mim.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      <strong className="text-green-700">Facilidade para identificar padrões</strong> — em pessoas, comportamentos, sistemas. 
+                      Quero usar isso para ajudar, não para mim.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      <strong className="text-green-700">Experiência de vida</strong> — autodescoberta das duas condições me dá 
+                      legitimidade para ajudar quem passa pelo mesmo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* A missão */}
+              <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-4 rounded-lg border border-purple-200">
+                <h4 className="font-bold text-purple-800 mb-2 flex items-center gap-2">
+                  <Instagram className="h-5 w-5 text-pink-600" />
+                  @rafael.tdah — A Missão
+                </h4>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Mídia social é o grande canal de comunicação com esse público. Milhões de adultos vivem com TDAH 
+                  sem saber — e eu posso ajudá-los a ter <strong className="text-purple-700">uma vida de verdade de volta</strong>.
+                </p>
+                <div className="bg-white/60 p-3 rounded text-center">
+                  <p className="text-purple-800 font-semibold italic">
+                    "Quero salvar vidas. Preciso das condições necessárias para isso."
+                  </p>
                 </div>
               </div>
             </CardContent>
