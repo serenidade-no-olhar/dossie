@@ -485,8 +485,8 @@ const ConhecendoTerreno = ({ onBack, onLogout }: ConhecendoTerrenoProps) => {
                     <span className="text-purple-400">1.</span> Comunicação Zero Direta
                   </h4>
                   <p className="text-slate-400 text-sm">
-                    Toda comunicação deve ser via e-mail, com cópia para os advogados. 
-                    Nada de WhatsApp, nada de ligações, nada de conversas presenciais sem testemunhas.
+                    Toda comunicação deve ser por escrito (e-mail ou mensagem). 
+                    Nada de ligações, nada de conversas presenciais sem testemunhas. Tudo documentado.
                   </p>
                 </div>
 

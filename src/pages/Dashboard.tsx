@@ -17,13 +17,15 @@ import {
   Play,
   Image as ImageIcon,
   Eye,
-  Scale
+  Scale,
+  Receipt
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import PensaoSidebar from "@/components/PensaoSidebar";
 
 type View = "dashboard" | "jornada" | "provas";
-type ProvaCategoria = "comprovantes" | "dialogos" | "ma-fe" | "boa-fe" | "audios";
+type ProvaCategoria = "comprovantes" | "dialogos" | "ma-fe" | "boa-fe" | "audios" | "despesas";
 type Page = "login" | "dashboard" | "conhecendo-terreno" | "estrategia-juridica";
 
 interface DashboardProps {
@@ -34,6 +36,7 @@ interface DashboardProps {
 export default function Dashboard({ onLogout, onNavigate }: DashboardProps) {
   const [currentView, setCurrentView] = useState<View>("dashboard");
   const [selectedCategoria, setSelectedCategoria] = useState<ProvaCategoria | null>(null);
+  const [pensaoSidebarOpen, setPensaoSidebarOpen] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem("dossie_auth");
@@ -100,6 +103,12 @@ export default function Dashboard({ onLogout, onNavigate }: DashboardProps) {
           )}
         </AnimatePresence>
       </main>
+
+      {/* Painel Lateral de Pensões */}
+      <PensaoSidebar 
+        isOpen={pensaoSidebarOpen} 
+        onToggle={() => setPensaoSidebarOpen(!pensaoSidebarOpen)} 
+      />
     </div>
   );
 }
@@ -448,6 +457,14 @@ function ProvasView({
       icon: Mic,
       color: "purple",
       count: 3
+    },
+    {
+      id: "despesas" as ProvaCategoria,
+      titulo: "Despesas",
+      descricao: "Gastos com o filho, compras, investimentos",
+      icon: Receipt,
+      color: "cyan",
+      count: 0
     }
   ];
 
@@ -457,7 +474,8 @@ function ProvasView({
       blue: { bg: "bg-blue-500/10", text: "text-blue-500", border: "border-blue-500/30" },
       red: { bg: "bg-red-500/10", text: "text-red-500", border: "border-red-500/30" },
       pink: { bg: "bg-pink-500/10", text: "text-pink-500", border: "border-pink-500/30" },
-      purple: { bg: "bg-purple-500/10", text: "text-purple-500", border: "border-purple-500/30" }
+      purple: { bg: "bg-purple-500/10", text: "text-purple-500", border: "border-purple-500/30" },
+      cyan: { bg: "bg-cyan-500/10", text: "text-cyan-500", border: "border-cyan-500/30" }
     };
     return colors[color] || colors.blue;
   };
