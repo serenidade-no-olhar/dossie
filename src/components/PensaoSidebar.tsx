@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   ChevronLeft, 
@@ -25,8 +25,28 @@ interface PensaoSidebarProps {
 
 export default function PensaoSidebar({ isOpen, onToggle }: PensaoSidebarProps) {
   const [selectedYear, setSelectedYear] = useState(2026);
-  const currentMonth = new Date().getMonth() + 1; // Janeiro = 1
-  const currentYear = new Date().getFullYear();
+  const [showWolf, setShowWolf] = useState(false);
+
+  // Animação do lobo que aparece periodicamente
+  useEffect(() => {
+    if (isOpen) return; // Não mostrar quando o painel está aberto
+    
+    const interval = setInterval(() => {
+      setShowWolf(true);
+      setTimeout(() => setShowWolf(false), 3000); // Lobo fica visível por 3 segundos
+    }, 8000); // A cada 8 segundos
+
+    // Mostrar na primeira vez após 2 segundos
+    const initialTimeout = setTimeout(() => {
+      setShowWolf(true);
+      setTimeout(() => setShowWolf(false), 3000);
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(initialTimeout);
+    };
+  }, [isOpen]);
 
   // Dados das pensões - depois você atualiza com os links do Google Drive
   const pensoes2025: PensaoMes[] = [
@@ -80,19 +100,102 @@ export default function PensaoSidebar({ isOpen, onToggle }: PensaoSidebarProps) 
 
   return (
     <>
+      {/* Lobo animado que caminha em direção ao botão */}
+      <AnimatePresence>
+        {showWolf && !isOpen && (
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 50, opacity: 0 }}
+            transition={{ 
+              duration: 2,
+              ease: "easeOut"
+            }}
+            className="fixed right-16 top-1/2 -translate-y-1/2 z-40 pointer-events-none"
+          >
+            <motion.div
+              animate={{ 
+                y: [0, -3, 0],
+              }}
+              transition={{ 
+                duration: 0.5, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="flex items-center gap-2"
+            >
+              {/* Lobo minimalista */}
+              <motion.img 
+                src="/mascote-lobo.png" 
+                alt="Lobo" 
+                className="w-10 h-10 drop-shadow-lg"
+                animate={{ 
+                  rotate: [0, -5, 5, 0],
+                }}
+                transition={{ 
+                  duration: 1, 
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              {/* Seta apontando para o botão */}
+              <motion.div
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 0.8, repeat: Infinity }}
+                className="text-emerald-400"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Toggle Button - sempre visível */}
       <motion.button
         onClick={onToggle}
-        className="fixed right-0 top-1/2 -translate-y-1/2 z-50 bg-gradient-to-l from-emerald-600 to-emerald-700 text-white px-2 py-6 rounded-l-xl shadow-lg hover:from-emerald-500 hover:to-emerald-600 transition-all"
+        className="fixed right-0 top-1/2 -translate-y-1/2 z-50 bg-gradient-to-l from-emerald-600 to-emerald-700 text-white px-2 py-6 rounded-l-xl shadow-lg hover:from-emerald-500 hover:to-emerald-600 transition-all overflow-hidden"
         whileHover={{ x: -4 }}
-        animate={{ x: isOpen ? -280 : 0 }}
+        animate={{ 
+          x: isOpen ? -280 : 0,
+          boxShadow: isOpen ? "0 0 0 rgba(16, 185, 129, 0)" : [
+            "0 0 0 rgba(16, 185, 129, 0)",
+            "0 0 20px rgba(16, 185, 129, 0.5)",
+            "0 0 0 rgba(16, 185, 129, 0)"
+          ]
+        }}
+        transition={{
+          boxShadow: {
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }
+        }}
       >
-        <div className="flex flex-col items-center gap-2">
+        {/* Glow effect */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-t from-emerald-400/0 via-emerald-400/30 to-emerald-400/0"
+          animate={{
+            y: ["-100%", "100%"]
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        
+        <div className="relative flex flex-col items-center gap-2">
           {isOpen ? <ChevronRight className="w-5 h-5" /> : <ChevronLeft className="w-5 h-5" />}
-          <span className="text-xs font-bold writing-mode-vertical" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+          <span className="text-xs font-bold" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
             PENSÕES
           </span>
-          <DollarSign className="w-4 h-4" />
+          <motion.div
+            animate={!isOpen ? { scale: [1, 1.2, 1] } : {}}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <DollarSign className="w-4 h-4" />
+          </motion.div>
         </div>
       </motion.button>
 

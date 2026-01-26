@@ -461,7 +461,7 @@ function ProvasView({
     {
       id: "despesas" as ProvaCategoria,
       titulo: "Despesas",
-      descricao: "Gastos com o filho, compras, investimentos",
+      descricao: "Plano de saúde, aluguel, medicamentos e outros custos pessoais",
       icon: Receipt,
       color: "cyan",
       count: 0
