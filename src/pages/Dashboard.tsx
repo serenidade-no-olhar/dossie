@@ -565,7 +565,7 @@ function ProvasView({
               whileTap={{ scale: 0.98 }}
             >
               <Card 
-                className={`cursor-pointer bg-slate-800/50 border-slate-700 hover:${colors.border} transition-all p-6`}
+                className={`cursor-pointer bg-slate-800/50 border-slate-700 hover:${colors.border} transition-all p-6 h-full min-h-[180px] flex flex-col`}
                 onClick={() => onSelectCategoria(cat.id)}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -577,7 +577,7 @@ function ProvasView({
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{cat.titulo}</h3>
-                <p className="text-sm text-slate-400">{cat.descricao}</p>
+                <p className="text-sm text-slate-400 line-clamp-2">{cat.descricao}</p>
               </Card>
             </motion.div>
           );
